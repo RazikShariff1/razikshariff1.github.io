@@ -32,18 +32,32 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
 }
 
-// Active nav link by section
+// Tab-style pages with hash routing (#home, #experience, #projects, #contact)
 const links = [...document.querySelectorAll('[data-link]')];
-const secs = links.map((l) => document.querySelector(l.getAttribute('href')));
-if ('IntersectionObserver' in window) {
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  secs.forEach((s) => s && spy.observe(s));
-}
+const pages = [...document.querySelectorAll('[data-page]')];
+const names = pages.map((p) => p.dataset.page);
+const show = (hash, scroll = true) => {
+  let name = hash.replace('#', '') || 'home';
+  if (name === 'about' || name === 'work' || name === 'top') name = 'home';
+  if (!names.includes(name)) name = 'home';
+  pages.forEach((p) => p.classList.toggle('active', p.dataset.page === name));
+  links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + name));
+  pages.find((p) => p.dataset.page === name).querySelectorAll('.reveal').forEach((el) => {
+    if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight) el.classList.add('in');
+  });
+  if (scroll) window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  onScroll();
+};
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  e.preventDefault();
+  const h = a.getAttribute('href');
+  if (location.hash !== h) history.pushState(null, '', h);
+  show(h);
+});
+addEventListener('popstate', () => show(location.hash));
+show(location.hash, false);
 
 // Spotlight follows cursor
 document.querySelectorAll('[data-spot]').forEach((el) => {

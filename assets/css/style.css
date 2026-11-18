@@ -320,7 +320,6 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 }
 @media (max-width: 720px) {
   .section { padding-top: 88px; }
-  .nav-links { display: none; }
   .nav { padding: 8px 8px 8px 10px; width: 100%; justify-content: space-between; }
   .bento, .projects { grid-template-columns: minmax(0, 1fr); }
   .tile-lg, .tile-wide { grid-column: auto; }
@@ -331,4 +330,20 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ============ Tabs / pages ============ */
+.page { display: none; }
+.page.active { display: block; animation: pagein .55s var(--ease) both; }
+@keyframes pagein { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+section.page.section { padding-top: 150px; min-height: 70vh; }
+section.page.active.section { display: block; }
+@media (max-width: 720px) {
+  .nav-wrap { top: 10px; padding: 0 10px; }
+  .nav-links { display: flex; flex: 1; justify-content: center; overflow-x: auto; scrollbar-width: none; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: 8px 10px; font-size: 13px; }
+  .nav-cta { display: none; }
+  .nav { padding-right: 10px; gap: 4px; }
+  section.page.section { padding-top: 110px; }
 }

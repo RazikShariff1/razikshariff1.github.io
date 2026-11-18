@@ -24,10 +24,9 @@
 
   <header class="nav-wrap">
     <nav class="nav" aria-label="Primary">
-      <a href="#top" class="nav-logo" aria-label="Home">RS</a>
+      <a href="#home" class="nav-logo" aria-label="Home">RS</a>
       <ul class="nav-links">
-        <li><a href="#about" data-link>About</a></li>
-        <li><a href="#work" data-link>Work</a></li>
+        <li><a href="#home" data-link>Home</a></li>
         <li><a href="#experience" data-link>Experience</a></li>
         <li><a href="#projects" data-link>Projects</a></li>
         <li><a href="#contact" data-link>Contact</a></li>
@@ -37,6 +36,7 @@
   </header>
 
   <main id="top">
+    <div class="page active" data-page="home">
     <!-- HERO -->
     <section class="hero container">
       <div class="hero-copy">
@@ -150,8 +150,10 @@
       </div>
     </section>
 
+    </div>
+
     <!-- EXPERIENCE -->
-    <section id="experience" class="section container">
+    <section id="experience" class="page section container" data-page="experience">
       <p class="eyebrow reveal">03 — Experience</p>
       <h2 class="section-title reveal">Where I’ve worked and learned.</h2>
 
@@ -189,7 +191,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section container">
+    <section id="projects" class="page section container" data-page="projects">
       <p class="eyebrow reveal">04 — Projects</p>
       <div class="projects-head">
         <h2 class="section-title reveal">Selected projects.</h2>
@@ -236,7 +238,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section container">
+    <section id="contact" class="page section container" data-page="contact">
       <div class="cta reveal" data-spot>
         <p class="eyebrow">05 — Contact</p>
         <h2 class="cta-title">Let’s build something <span class="grad">reliable</span>.</h2>
@@ -254,7 +256,7 @@
 
   <footer class="footer container">
     <span>© <span data-year>2026</span> Razik Shariff</span>
-    <a href="#top">Back to top ↑</a>
+    <a href="#home" data-top>Back to top ↑</a>
   </footer>
 
   <script src="./assets/js/script.js"></script>
