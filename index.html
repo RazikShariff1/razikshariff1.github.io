@@ -50,6 +50,7 @@
             <ul class="socials">
               <li><a href="https://github.com/razikshariff1" target="_blank" rel="noopener" aria-label="GitHub"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .4 1 .4 1.9.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a></li>
               <li><a href="https://www.linkedin.com/in/razik-shariff-19266b278/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V21h-3v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9z"/></svg></a></li>
+              <li><a href="https://leetcode.com/u/razikshariff1/" target="_blank" rel="noopener" aria-label="LeetCode"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 4-4 16"/></svg></a></li>
               <li><a href="mailto:razikshariff7094@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a></li>
             </ul>
           </div>
@@ -247,19 +248,34 @@
     <div class="page" data-page="contact">
       <header class="page-head container">
         <h1>Contact</h1>
-        <p>Want to talk about backend work, or just say hello? Email is the quickest way to reach me.</p>
+        <p>Want to talk about backend work, or just say hello? Send a message below or use any of the links.</p>
       </header>
 
       <section class="block container">
         <div class="split">
-          <div class="split-label">
-            <a class="btn btn-primary" href="mailto:razikshariff7094@gmail.com">Send an email</a>
-          </div>
+          <div class="split-label"><h2>Send a message</h2><p>I usually reply within a day or two.</p></div>
+          <form class="form card" id="contact-form" data-endpoint="" data-email="razikshariff7094@gmail.com" novalidate>
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="6" required></textarea></div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-foot">
+              <button class="btn btn-primary" type="submit">Send message</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="block container">
+        <div class="split">
+          <div class="split-label"><h2>Elsewhere</h2><p>Other ways to reach me or see my work.</p></div>
           <ul class="contact">
             <li><a class="card row" href="mailto:razikshariff7094@gmail.com"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><span class="row-text"><span class="label">Email</span><b>razikshariff7094@gmail.com</b></span></a></li>
             <li><a class="card row" href="tel:+917975653367"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg></span><span class="row-text"><span class="label">Phone</span><b>+91 79756 53367</b></span></a></li>
             <li><a class="card row" href="https://www.linkedin.com/in/razik-shariff-19266b278/" target="_blank" rel="noopener"><span class="icon"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V21h-3v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9z"/></svg></span><span class="row-text"><span class="label">LinkedIn</span><b>linkedin.com/in/razik-shariff</b></span></a></li>
             <li><a class="card row" href="https://github.com/razikshariff1" target="_blank" rel="noopener"><span class="icon"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .4 1 .4 1.9.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></span><span class="row-text"><span class="label">GitHub</span><b>github.com/razikshariff1</b></span></a></li>
+            <li><a class="card row" href="https://leetcode.com/u/razikshariff1/" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 4-4 16"/></svg></span><span class="row-text"><span class="label">LeetCode</span><b>leetcode.com/u/razikshariff1</b></span></a></li>
             <li><div class="card row"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span class="row-text"><span class="label">Location</span><b>Bengaluru, Karnataka, India</b></span></div></li>
           </ul>
         </div>

@@ -232,6 +232,26 @@ a.row:hover { border-color: var(--accent); }
 .row .label { display: block; font-size: 13px; font-weight: 500; color: var(--muted); line-height: 1.4; }
 .row b { display: block; font-size: 16px; font-weight: 600; color: var(--text); word-break: break-word; line-height: 1.4; }
 
+/* ============ Form ============ */
+.form { display: grid; gap: 18px; padding: 28px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 14px; font-weight: 600; color: var(--text); }
+.field input, .field textarea {
+  width: 100%; padding: 12px 14px; font: inherit; font-size: 16px; color: var(--text);
+  background: var(--bg); border: 1px solid var(--border-strong); border-radius: 10px; resize: vertical;
+  transition: border-color .15s, box-shadow .15s;
+}
+.field textarea { min-height: 140px; line-height: 1.6; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.field.invalid input, .field.invalid textarea { border-color: #ef6b6b; }
+.field .err { font-size: 13px; color: #ef6b6b; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.form-foot .btn:disabled { opacity: .6; cursor: progress; }
+.form-status { font-size: 15px; color: var(--muted); }
+.form-status.ok { color: #34d399; }
+.form-status.bad { color: #ef6b6b; }
+
 /* ============ Footer ============ */
 .footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 56px; padding: 28px 0 40px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
 .footer a:hover { color: var(--text); }
