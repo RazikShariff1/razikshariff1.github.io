@@ -249,22 +249,21 @@
     <div class="page" data-page="contact">
       <header class="page-head container">
         <h1>Contact</h1>
-        <p>Want to talk about backend work, or just say hello? Send a message below or use any of the links.</p>
+        <p>Want to talk about backend work, or just say hello? Send me a message or use any of the links below.</p>
       </header>
 
       <section class="block container">
         <div class="split">
-          <div class="split-label"><h2>Send a message</h2><p>I usually reply within a day or two.</p></div>
-          <form class="form card" id="contact-form" data-endpoint="" data-email="razikshariff7094@gmail.com" novalidate>
-            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="6" required></textarea></div>
-            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="form-foot">
-              <button class="btn btn-primary" type="submit">Send message</button>
-              <p class="form-status" role="status" aria-live="polite"></p>
+          <div class="split-label"><h2>Get in touch</h2><p>The quickest way to reach me.</p></div>
+          <div class="card msg-card">
+            <div>
+              <h3>Have a question or an idea?</h3>
+              <p>Write to me right from this page. It only takes a minute.</p>
             </div>
-          </form>
+            <button class="btn btn-primary" type="button" data-open-contact>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Send a message
+            </button>
+          </div>
         </div>
       </section>
 
@@ -289,6 +288,27 @@
     <span>© <span data-year>2026</span> Razik Shariff</span>
     <a href="#home">Back to home</a>
   </footer>
+
+  <dialog class="modal" id="contact-dialog" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div><h2 id="modal-title">Send a message</h2><p>I usually reply within a day or two.</p></div>
+        <button class="modal-close" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+                <form class="form" id="contact-form" data-endpoint="" data-email="razikshariff7094@gmail.com" novalidate>
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="6" required></textarea></div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-foot">
+              <button class="btn btn-primary" type="submit">Send message</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+    </div>
+  </dialog>
 
   <script src="./assets/js/script.js"></script>
 </body>

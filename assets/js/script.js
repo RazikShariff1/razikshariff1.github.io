@@ -48,7 +48,19 @@ buttons.forEach((btn) => btn.addEventListener('click', () => {
 }));
 
 // Contact form: posts to a form service when data-endpoint is set, otherwise opens a pre-filled email
+const dialog = document.getElementById('contact-dialog');
 const form = document.getElementById('contact-form');
+if (dialog && form) {
+  const lock = (on) => document.documentElement.classList.toggle('modal-open', on);
+  const closeDlg = () => dialog.close();
+  document.querySelectorAll('[data-open-contact]').forEach((b) => b.addEventListener('click', () => {
+    dialog.showModal(); lock(true);
+    dialog.querySelector('input[name="name"]').focus();
+  }));
+  dialog.querySelector('[data-close]').addEventListener('click', closeDlg);
+  dialog.addEventListener('mousedown', (e) => { if (e.target === dialog) closeDlg(); }); // click on backdrop
+  dialog.addEventListener('close', () => lock(false));
+}
 if (form) {
   const status = form.querySelector('.form-status');
   const btn = form.querySelector('button[type="submit"]');
@@ -78,7 +90,8 @@ if (form) {
       const subject = encodeURIComponent('Portfolio message from ' + data.name);
       const body = encodeURIComponent(data.message + '\n\n— ' + data.name + ' (' + data.email + ')');
       location.href = 'mailto:' + form.dataset.email + '?subject=' + subject + '&body=' + body;
-      return say('Opening your email app with the message ready to send…', 'ok');
+      say('Opening your email app with the message ready to send…', 'ok');
+      return setTimeout(() => dialog && dialog.open && dialog.close(), 1200);
     }
 
     btn.disabled = true; say('Sending…');
@@ -91,6 +104,7 @@ if (form) {
       if (!res.ok) throw new Error(res.status);
       form.reset();
       say('Thanks! Your message was sent.', 'ok');
+      setTimeout(() => dialog && dialog.open && dialog.close(), 1800);
     } catch (err) {
       say('Could not send right now. Please email ' + form.dataset.email + ' instead.', 'bad');
     } finally { btn.disabled = false; }
