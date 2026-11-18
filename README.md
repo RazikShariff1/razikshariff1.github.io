@@ -2,7 +2,7 @@
 
 Personal portfolio of Razik Shariff, SDE 1 Backend at Zopping.
 
-A single-page, dependency-free site (plain HTML, CSS and JS): aurora background, floating nav, bento grid, timeline, filterable project cards, scroll-reveal animations, and automatic light/dark theme.
+A clean, dependency-free site (plain HTML, CSS and JS) with four tabs: Home, Experience, Projects and Contact. Automatic light and dark theme, one font (Inter) and a single accent colour.
 
 ## Edit
 - Text and projects: `index.html`
