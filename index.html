@@ -11,7 +11,7 @@
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon-96.png">
   <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
-  <meta name="theme-color" content="#0f1115">
+  <meta name="theme-color" content="#0e1014">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
 
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="#home" class="brand">Razik Shariff</a>
+      <a href="#home" class="brand"><span class="brand-mark">RS</span><span class="brand-name">Razik Shariff</span></a>
       <nav aria-label="Primary">
         <ul class="tabs">
           <li><a href="#home" data-link>Home</a></li>
@@ -41,119 +41,162 @@
 
       <section class="hero container">
         <div class="hero-text">
-          <p class="hero-role">SDE 1, Backend · Zopping · Bengaluru</p>
-          <h1>Hi, I’m Razik Shariff.</h1>
+          <p class="eyebrow">Backend Engineer</p>
+          <h1>Razik Shariff</h1>
           <p class="lead">I build Go and PostgreSQL microservices for a multi-seller marketplace, working on the parts where orders, stock and money change hands.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#projects">View projects</a>
             <a class="btn btn-outline" href="#contact">Contact me</a>
+            <ul class="socials">
+              <li><a href="https://github.com/razikshariff1" target="_blank" rel="noopener" aria-label="GitHub"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .4 1 .4 1.9.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a></li>
+              <li><a href="https://www.linkedin.com/in/razik-shariff-19266b278/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V21h-3v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9z"/></svg></a></li>
+              <li><a href="mailto:razikshariff7094@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a></li>
+            </ul>
           </div>
         </div>
-        <img class="hero-photo" src="./assets/images/razik.jpg" alt="Razik Shariff" width="400" height="400">
-      </section>
-
-      <section class="section container">
-        <div class="section-head"><h2>About</h2></div>
-        <div class="prose">
-          <p>I’m a backend engineer (SDE 1) at Zopping in Bengaluru, building Go and PostgreSQL microservices for a multi-seller e-commerce marketplace. I work on the parts where orders, stock and money change hands: order processing, inventory, payments and dispatch.</p>
-          <p>I like systems that stay correct when things go wrong, such as a retried request that must not create a second order, or two shoppers racing for the last item in stock.</p>
+        <div class="hero-photo">
+          <img src="./assets/images/razik.jpg" alt="Razik Shariff" width="400" height="400">
         </div>
       </section>
 
-      <section class="section container">
-        <div class="section-head"><h2>What I’m doing</h2></div>
-        <ul class="grid grid-2">
-          <li class="card">
-            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="m9.5 13.5 2 2 3.5-3.5"/></svg></span>
-            <h3>Order Processing</h3>
-            <p>Idempotent order placement and a tracked lifecycle from pending to packed, dispatched and completed.</p>
-          </li>
-          <li class="card">
-            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
-            <h3>Inventory &amp; Logistics</h3>
-            <p>Expiring stock reservations so concurrent checkouts never oversell, released on cancel.</p>
-          </li>
-          <li class="card">
-            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
-            <h3>Payments</h3>
-            <p>Payment status tracking across paid, cancelled and refunded orders, with cash on delivery settled on completion.</p>
-          </li>
-          <li class="card">
-            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
-            <h3>Platform &amp; Access</h3>
-            <p>An API gateway with seller-scoped, role-based access in front of every service.</p>
-          </li>
+      <section class="container facts-wrap" aria-label="Quick facts">
+        <ul class="facts">
+          <li><span>Role</span><b>SDE 1, Backend</b></li>
+          <li><span>Company</span><b>Zopping</b></li>
+          <li><span>Location</span><b>Bengaluru, India</b></li>
+          <li><span>Education</span><b>B.E. CSE · 9.29 CGPA</b></li>
         </ul>
       </section>
 
-      <section class="section container">
-        <div class="section-head"><h2>Tech stack</h2></div>
-        <ul class="stack">
-          <li><img src="./assets/icons/logos-go.svg" alt="" width="24" height="24">Go</li>
-          <li><img src="./assets/icons/logos-java.svg" alt="" width="24" height="24">Java</li>
-          <li><img src="./assets/icons/logos-python.svg" alt="" width="24" height="24">Python</li>
-          <li><img src="./assets/icons/logos-javascript.svg" alt="" width="24" height="24">JavaScript</li>
-          <li><img src="./assets/icons/logos-react.svg" alt="" width="24" height="24">React</li>
-          <li><img src="./assets/icons/logos-spring-icon.svg" alt="" width="24" height="24">Spring Boot</li>
-          <li><img src="./assets/icons/logos-maven.svg" alt="" width="24" height="24">Maven</li>
-          <li><img src="./assets/icons/devicon-mongodb.svg" alt="" width="24" height="24">MongoDB</li>
-          <li><img src="./assets/icons/logos-mysql.svg" alt="" width="24" height="24">MySQL</li>
-          <li><img src="./assets/icons/logos-postgresql.svg" alt="" width="24" height="24">PostgreSQL</li>
-          <li><img src="./assets/icons/logos-git-icon.svg" alt="" width="24" height="24">Git</li>
-          <li><img src="./assets/icons/logos-docker-icon.svg" alt="" width="24" height="24">Docker</li>
-          <li><img src="./assets/icons/devicon-kubernetes.svg" alt="" width="24" height="24">Kubernetes</li>
-          <li><img src="./assets/icons/logos-google-cloud.svg" alt="" width="24" height="24">GKE</li>
-          <li><img src="./assets/icons/flat-color-icons-linux.svg" alt="" width="24" height="24">Linux</li>
-          <li><img src="./assets/icons/logos-github-actions.svg" alt="" width="24" height="24">CI/CD</li>
-        </ul>
+      <section class="block container">
+        <div class="split">
+          <div class="split-label"><h2>About</h2></div>
+          <div class="prose">
+            <p>I’m a backend engineer (SDE 1) at Zopping in Bengaluru, building Go and PostgreSQL microservices for a multi-seller e-commerce marketplace. I work on the parts where orders, stock and money change hands: order processing, inventory, payments and dispatch.</p>
+            <p>I like systems that stay correct when things go wrong, such as a retried request that must not create a second order, or two shoppers racing for the last item in stock.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block container">
+        <div class="split">
+          <div class="split-label"><h2>What I’m doing</h2><p>Where my day-to-day work goes.</p></div>
+          <ul class="grid grid-2">
+            <li class="card">
+              <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="m9.5 13.5 2 2 3.5-3.5"/></svg></span>
+              <h3>Order Processing</h3>
+              <p>Idempotent order placement and a tracked lifecycle from pending to packed, dispatched and completed.</p>
+            </li>
+            <li class="card">
+              <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
+              <h3>Inventory &amp; Logistics</h3>
+              <p>Expiring stock reservations so concurrent checkouts never oversell, released on cancel.</p>
+            </li>
+            <li class="card">
+              <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
+              <h3>Payments</h3>
+              <p>Payment status tracking across paid, cancelled and refunded orders, with cash on delivery settled on completion.</p>
+            </li>
+            <li class="card">
+              <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <h3>Platform &amp; Access</h3>
+              <p>An API gateway with seller-scoped, role-based access in front of every service.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block container">
+        <div class="split">
+          <div class="split-label"><h2>Tech stack</h2><p>Tools I work with.</p></div>
+          <ul class="stack">
+            <li><img src="./assets/icons/logos-go.svg" alt="" width="24" height="24">Go</li>
+            <li><img src="./assets/icons/logos-java.svg" alt="" width="24" height="24">Java</li>
+            <li><img src="./assets/icons/logos-python.svg" alt="" width="24" height="24">Python</li>
+            <li><img src="./assets/icons/logos-javascript.svg" alt="" width="24" height="24">JavaScript</li>
+            <li><img src="./assets/icons/logos-react.svg" alt="" width="24" height="24">React</li>
+            <li><img src="./assets/icons/logos-spring-icon.svg" alt="" width="24" height="24">Spring Boot</li>
+            <li><img src="./assets/icons/logos-maven.svg" alt="" width="24" height="24">Maven</li>
+            <li><img src="./assets/icons/devicon-mongodb.svg" alt="" width="24" height="24">MongoDB</li>
+            <li><img src="./assets/icons/logos-mysql.svg" alt="" width="24" height="24">MySQL</li>
+            <li><img src="./assets/icons/logos-postgresql.svg" alt="" width="24" height="24">PostgreSQL</li>
+            <li><img src="./assets/icons/logos-git-icon.svg" alt="" width="24" height="24">Git</li>
+            <li><img src="./assets/icons/logos-docker-icon.svg" alt="" width="24" height="24">Docker</li>
+            <li><img src="./assets/icons/devicon-kubernetes.svg" alt="" width="24" height="24">Kubernetes</li>
+            <li><img src="./assets/icons/logos-google-cloud.svg" alt="" width="24" height="24">GKE</li>
+            <li><img src="./assets/icons/flat-color-icons-linux.svg" alt="" width="24" height="24">Linux</li>
+            <li><img src="./assets/icons/logos-github-actions.svg" alt="" width="24" height="24">CI/CD</li>
+          </ul>
+        </div>
       </section>
     </div>
 
     <!-- ============ EXPERIENCE ============ -->
     <div class="page" data-page="experience">
-      <section class="section container">
-        <div class="section-head"><h1 class="page-title">Experience</h1></div>
+      <header class="page-head container">
+        <h1>Experience</h1>
+        <p>Where I work, what I studied, and what I’ve built along the way.</p>
+      </header>
 
-        <h2 class="group">Work</h2>
-        <ul class="list">
-          <li class="card entry">
-            <div class="entry-top"><h3>SDE 1, Backend</h3><span class="date">Aug 2025 – Present</span></div>
-            <p class="org">Zopping</p>
-            <p>Building Go (GoFr) and PostgreSQL microservices for a multi-seller marketplace: idempotent order placement, an audited order lifecycle for fulfilment and dispatch, expiring stock reservations that prevent overselling, payment tracking, and an API gateway with seller-scoped access.</p>
-            <ul class="tags"><li>Go</li><li>GoFr</li><li>PostgreSQL</li><li>Docker</li><li>Kubernetes</li><li>GKE</li><li>GitHub Actions</li><li>REST APIs</li></ul>
-          </li>
-        </ul>
+      <section class="block container">
+        <div class="split">
+          <div class="split-label"><h2>Work</h2></div>
+          <ul class="list">
+            <li class="card entry">
+              <div class="entry-top"><h3>SDE 1, Backend</h3><span class="date">Aug 2025 – Present</span></div>
+              <p class="org">Zopping</p>
+              <p>Building Go (GoFr) and PostgreSQL microservices for a multi-seller marketplace: idempotent order placement, an audited order lifecycle for fulfilment and dispatch, expiring stock reservations that prevent overselling, payment tracking, and an API gateway with seller-scoped access.</p>
+              <ul class="tags"><li>Go</li><li>GoFr</li><li>PostgreSQL</li><li>Docker</li><li>Kubernetes</li><li>GKE</li><li>GitHub Actions</li><li>REST APIs</li></ul>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <h2 class="group">Education</h2>
-        <ul class="list">
-          <li class="card entry">
-            <div class="entry-top"><h3>B.E. Computer Science &amp; Engineering</h3><span class="date">2022 – 2026</span></div>
-            <p class="org">New Horizon College of Engineering (VTU)</p>
-            <p>Bachelor of Engineering in Computer Science &amp; Engineering, CGPA 9.29/10.</p>
-          </li>
-        </ul>
+      <section class="block container">
+        <div class="split">
+          <div class="split-label"><h2>Education</h2></div>
+          <ul class="list">
+            <li class="card entry">
+              <div class="entry-top"><h3>B.E. Computer Science &amp; Engineering</h3><span class="date">2022 – 2026</span></div>
+              <p class="org">New Horizon College of Engineering (VTU)</p>
+              <p>Bachelor of Engineering in Computer Science &amp; Engineering, CGPA 9.29/10.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <h2 class="group">Achievements</h2>
-        <ul class="list">
-          <li class="card entry">
-            <div class="entry-top"><h3>IEEE Runtime ’24</h3><span class="date">Top 25, state level</span></div>
-            <p>Built Namma Doctor, a full-stack healthcare app with AI recommendations, telemedicine and appointment booking.</p>
-          </li>
-          <li class="card entry">
-            <div class="entry-top"><h3>Smart India Hackathon</h3><span class="date">Top 45 teams in college</span></div>
-            <p>Built offline remote-learning and data-parsing tools for rural education.</p>
-          </li>
-        </ul>
+      <section class="block container">
+        <div class="split">
+          <div class="split-label"><h2>Achievements</h2></div>
+          <ul class="list">
+            <li class="card entry">
+              <div class="entry-top"><h3>IEEE Runtime ’24</h3><span class="date">Top 25, state level</span></div>
+              <p>Built Namma Doctor, a full-stack healthcare app with AI recommendations, telemedicine and appointment booking.</p>
+            </li>
+            <li class="card entry">
+              <div class="entry-top"><h3>Smart India Hackathon</h3><span class="date">Top 45 teams in college</span></div>
+              <p>Built offline remote-learning and data-parsing tools for rural education.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <p class="note"><a class="link" href="./assets/Razik_Shariff_Resume.pdf" target="_blank" rel="noopener">Open full résumé (PDF) →</a></p>
+      <section class="container">
+        <div class="cta-row">
+          <div><h3>Want the full picture?</h3><p>Download my résumé as a PDF.</p></div>
+          <a class="btn btn-primary" href="./assets/Razik_Shariff_Resume.pdf" target="_blank" rel="noopener">Open résumé</a>
+        </div>
       </section>
     </div>
 
     <!-- ============ PROJECTS ============ -->
     <div class="page" data-page="projects">
-      <section class="section container">
-        <div class="section-head"><h1 class="page-title">Projects</h1></div>
+      <header class="page-head container">
+        <h1>Projects</h1>
+        <p>A few things I’ve built. Each one links to its source on GitHub.</p>
+      </header>
 
+      <section class="block container">
         <ul class="filters" role="group" aria-label="Filter projects">
           <li><button class="active" data-filter="all">All</button></li>
           <li><button data-filter="full stack">Full Stack</button></li>
@@ -165,26 +208,34 @@
         <ul class="grid grid-2 projects">
           <li class="project" data-category="full stack, backend">
             <a class="card" href="https://github.com/razikshariff1/case-studio" target="_blank" rel="noopener">
-              <img src="./assets/images/case-studio.svg" alt="Case Studio preview" loading="lazy" width="640" height="400">
-              <div class="project-info"><h3>Case Studio</h3><p>Full Stack</p></div>
+              <div class="project-top"><span class="kind">Full Stack</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+              <h3>Case Studio</h3>
+              <ul class="tags"><li>Next.js</li><li>Prisma</li><li>PostgreSQL</li></ul>
+              <span class="view">View on GitHub</span>
             </a>
           </li>
           <li class="project" data-category="full stack, frontend">
             <a class="card" href="https://github.com/razikshariff1/chat-app" target="_blank" rel="noopener">
-              <img src="./assets/images/chat-app.svg" alt="Chat App preview" loading="lazy" width="640" height="400">
-              <div class="project-info"><h3>Chat App</h3><p>Full Stack</p></div>
+              <div class="project-top"><span class="kind">Full Stack</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+              <h3>Chat App</h3>
+              <ul class="tags"><li>React</li><li>TypeScript</li><li>Supabase</li></ul>
+              <span class="view">View on GitHub</span>
             </a>
           </li>
           <li class="project" data-category="full stack">
             <a class="card" href="https://github.com/razikshariff1/NammaFarmer" target="_blank" rel="noopener">
-              <img src="./assets/images/nammafarmer.svg" alt="NammaFarmer preview" loading="lazy" width="640" height="400">
-              <div class="project-info"><h3>NammaFarmer</h3><p>Full Stack</p></div>
+              <div class="project-top"><span class="kind">Full Stack</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+              <h3>NammaFarmer</h3>
+              <ul class="tags"><li>React</li><li>Python</li><li>PostgreSQL</li></ul>
+              <span class="view">View on GitHub</span>
             </a>
           </li>
           <li class="project" data-category="machine learning">
             <a class="card" href="https://github.com/razikshariff1/Disease-Prediction" target="_blank" rel="noopener">
-              <img src="./assets/images/heart-disease.svg" alt="Heart Disease Predictor preview" loading="lazy" width="640" height="400">
-              <div class="project-info"><h3>Heart Disease Predictor</h3><p>Machine Learning</p></div>
+              <div class="project-top"><span class="kind">Machine Learning</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+              <h3>Heart Disease Predictor</h3>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>scikit-learn</li></ul>
+              <span class="view">View on GitHub</span>
             </a>
           </li>
         </ul>
@@ -194,16 +245,24 @@
 
     <!-- ============ CONTACT ============ -->
     <div class="page" data-page="contact">
-      <section class="section container">
-        <div class="section-head"><h1 class="page-title">Contact</h1></div>
-        <p class="lead narrow">Want to talk about backend work, or just say hello? Email is the quickest way to reach me.</p>
-        <ul class="contact">
-          <li class="card"><span class="label">Email</span><a href="mailto:razikshariff7094@gmail.com">razikshariff7094@gmail.com</a></li>
-          <li class="card"><span class="label">Phone</span><a href="tel:+917975653367">+91 79756 53367</a></li>
-          <li class="card"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/razik-shariff-19266b278/" target="_blank" rel="noopener">linkedin.com/in/razik-shariff</a></li>
-          <li class="card"><span class="label">GitHub</span><a href="https://github.com/razikshariff1" target="_blank" rel="noopener">github.com/razikshariff1</a></li>
-          <li class="card"><span class="label">Location</span><span>Bengaluru, Karnataka, India</span></li>
-        </ul>
+      <header class="page-head container">
+        <h1>Contact</h1>
+        <p>Want to talk about backend work, or just say hello? Email is the quickest way to reach me.</p>
+      </header>
+
+      <section class="block container">
+        <div class="split">
+          <div class="split-label">
+            <a class="btn btn-primary" href="mailto:razikshariff7094@gmail.com">Send an email</a>
+          </div>
+          <ul class="contact">
+            <li><a class="card row" href="mailto:razikshariff7094@gmail.com"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><span class="row-text"><span class="label">Email</span><b>razikshariff7094@gmail.com</b></span></a></li>
+            <li><a class="card row" href="tel:+917975653367"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg></span><span class="row-text"><span class="label">Phone</span><b>+91 79756 53367</b></span></a></li>
+            <li><a class="card row" href="https://www.linkedin.com/in/razik-shariff-19266b278/" target="_blank" rel="noopener"><span class="icon"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V21h-3v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9z"/></svg></span><span class="row-text"><span class="label">LinkedIn</span><b>linkedin.com/in/razik-shariff</b></span></a></li>
+            <li><a class="card row" href="https://github.com/razikshariff1" target="_blank" rel="noopener"><span class="icon"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .4 1 .4 1.9.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></span><span class="row-text"><span class="label">GitHub</span><b>github.com/razikshariff1</b></span></a></li>
+            <li><div class="card row"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span class="row-text"><span class="label">Location</span><b>Bengaluru, Karnataka, India</b></span></div></li>
+          </ul>
+        </div>
       </section>
     </div>
 
@@ -211,6 +270,7 @@
 
   <footer class="footer container">
     <span>© <span data-year>2026</span> Razik Shariff</span>
+    <a href="#home">Back to home</a>
   </footer>
 
   <script src="./assets/js/script.js"></script>
